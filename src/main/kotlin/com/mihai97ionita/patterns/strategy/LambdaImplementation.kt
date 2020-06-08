@@ -1,5 +1,6 @@
 package com.mihai97ionita.patterns.strategy
 
-class IFunctional: ()->Unit {
-     override fun invoke() = println(" I am ${this::class.simpleName}, I am an experiment")
+//TODO ()->Unit should be a lambda?
+class LambdaImplementation: ()->Unit {
+     override fun invoke() = println("I'm ${this::class.simpleName} and I'm an experiment")
 }

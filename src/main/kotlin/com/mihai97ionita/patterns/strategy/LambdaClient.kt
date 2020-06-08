@@ -1,4 +1,6 @@
-package com.mihai97ionita.patterns.strategy.kotlin
+package com.mihai97ionita.patterns.strategy
 
-class LambdaClient {
+//TODO is this still considered strategy pattern?
+class LambdaClient(private val lambda:()->Unit) {
+    fun action() = lambda.invoke()
 }
