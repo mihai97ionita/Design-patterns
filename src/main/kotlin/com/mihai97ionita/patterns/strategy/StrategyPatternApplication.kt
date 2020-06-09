@@ -1,6 +1,7 @@
 package com.mihai97ionita.patterns.strategy
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
 class StrategyPatternApplication{
@@ -22,14 +23,11 @@ fun main(args: Array<String>) {
 
 	LambdaClient { println("Using lambdas with strategy pattern") }.action()
 
-	//This is working somehow
+	//Giving a implementation of lambda function ( Function0 )
 	LambdaClient( LambdaImplementation() ).action()
 
-	//This is working somehow
-	LambdaClient{ unOwnedFunction() }.action()
-
-	//NOT working with static functions
+	//NOT working with static functions, compiler error?
 	//LambdaClient( StrategyPatternApplication::randomStaticFunction ).action()
 
-	//runApplication<StrategyPatternApplication>(*args)
+	runApplication<StrategyPatternApplication>(*args)
 }
