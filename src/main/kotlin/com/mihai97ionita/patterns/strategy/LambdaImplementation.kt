@@ -1,6 +1,9 @@
 package com.mihai97ionita.patterns.strategy
 
-//TODO ()->Unit should be a lambda?
-class LambdaImplementation: ()->Unit {
+//class LambdaExtended: ()->Unit {
+//      override fun invoke() = println("I'm ${this::class.simpleName} and I'm an experiment")
+//}
+
+class LambdaExtended: Function0<Unit> {
      override fun invoke() = println("I'm ${this::class.simpleName} and I'm an experiment")
 }
